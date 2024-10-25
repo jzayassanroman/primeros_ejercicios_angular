@@ -1,0 +1,8 @@
+<div class="lista">
+    <h1>Lista de Comentarios</h1>
+  
+    
+    <app-comentarios (comentarioEnviado)="agregarComentario($event)"></app-comentarios> <!-- Aqui añadimos el componente hijo (comentarios)-->
+  
+      <p *ngFor="let comentario of comentarios">{{ comentario }}</p> <!-- Aqui mostramos la lista de comentarios-->
+  </div>

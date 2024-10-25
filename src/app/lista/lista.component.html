@@ -1,0 +1,9 @@
+<div class="lista">
+    <h2>Lista de Tareas</h2>
+    
+    <input type="text" [(ngModel)]="nuevaTarea" placeholder="Escribe una tarea"> <!-- aqui el usuario puede escribir la tarea que quiere-->
+    
+    <button (click)="agregarTarea()">Agregar Tarea</button> <!-- aqui el usuario agrega una tarea que va a salir en el input -->
+    
+      <p *ngFor="let t of tareas">{{ t }}</p> <!-- aqui se muestra la lista de tareas que añadimos -->
+  </div>

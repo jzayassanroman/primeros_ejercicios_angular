@@ -1,0 +1,30 @@
+<div class="calculadora">
+    <h1>Calculadora Simple</h1>
+  
+    
+    <div> <!-- aqui pedimos al usuario el primer numero para las operaciones-->
+      <label for="numero1">Número 1:</label>
+      <input type="number" [(ngModel)]="numero1" id="numero1">
+    </div>
+  
+    <!-- aqui pedimos el segundo numero para las operaciones -->
+    <div>
+      <label for="numero2">Número 2:</label>
+      <input type="number" [(ngModel)]="numero2" id="numero2">
+    </div>
+  
+    <!-- aqui tenemos los botones para que nos enseñe el resultado de las operaciones -->
+    <div class="botones">
+      <button (click)="sumar()">Sumar</button>
+      <button (click)="restar()">Restar</button>
+      <button (click)="multiplicar()">Multiplicar</button>
+      <button (click)="dividir()">Dividir</button>
+      <button (click)="raizCuadrada()">Raíz Cuadrada</button>
+    </div>
+  
+    <!-- aqui enseñamos al usuario el resultado de las operaciones -->
+    <div class="resultado">
+      <h2>Resultado: {{ resultado }}</h2>
+    </div>
+  </div>
+  

@@ -1,0 +1,28 @@
+<div class="contenedor">
+  
+    <div class="articulos">
+      <h2>Lista de Artículos</h2>
+      <div *ngFor="let articulo of articulos" class="articulo">
+        <h3>{{ articulo.nombre }}</h3>
+        <p>Precio por unidad: ${{ articulo.precio }}</p> <!--Aqui nos sale el precio por unidad -->
+        <div class="controles">
+          <button (click)="disminuirCantidad(articulo)">-</button> <!-- aqui disminuimos la cantidad del producto-->
+          <span>{{ articulo.cantidad }}</span>
+          <button (click)="aumentarCantidad(articulo)">+</button> <!-- aqui aumentamos la cantidad del producto-->
+        </div>
+      </div>
+    </div>
+  
+    <div class="ticket">
+      <h2>Ticket de Compra</h2>
+      <div *ngFor="let articulo of articulos" class="ticket-item">
+        <ng-container *ngIf="articulo.cantidad > 0">
+          <p>{{ articulo.nombre }} ({{ articulo.cantidad }} x ${{ articulo.precio }})</p> <!--aqui cogemos el nombre, el precio y la cantidad para calcular el precio final-->
+          <p>Total: ${{ totalArticulo(articulo) | number:'1.2-2' }}</p>
+        </ng-container>
+      </div>
+      <h3>Total de la compra: ${{ totalCompra() | number:'1.2-2' }}</h3>
+    </div>
+  
+  </div>
+  

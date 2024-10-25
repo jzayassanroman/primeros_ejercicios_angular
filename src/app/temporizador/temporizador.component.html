@@ -1,0 +1,16 @@
+<div class="temporizador">
+    <h1>Temporizador</h1>
+    
+    <input 
+      type="number" 
+      [(ngModel)]="tiempo" 
+      placeholder="Ingresa el tiempo en segundos" 
+      min="1" 
+      style="margin-bottom: 10px"
+    /> <!-- Aqui le pedimos al usuario que nos añada un tiempo en segundos para iniciar el tempozidador--> 
+    
+    <button (click)="iniciarTemporizador()" [disabled]="isRunning">Iniciar</button> <!-- Inciamos el temporizador -->
+    <button (click)="detenerTemporizador()" [disabled]="!isRunning">Detener</button> <!-- Paramos el temporizador-->
+    
+    <h2 *ngIf="tiempoRestante >= 0">Tiempo restante: {{ tiempoRestante }} seg</h2> <!--Aqui vamos viendo el tiempo que nos queda --> 
+  </div>

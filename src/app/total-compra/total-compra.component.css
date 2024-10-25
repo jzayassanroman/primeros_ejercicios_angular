@@ -1,0 +1,56 @@
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .articulos, .ticket {
+    width: 45%;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .articulo, .ticket-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  .articulo h3, .ticket-item p {
+    margin: 0;
+  }
+  
+  .controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .ticket-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  h3 {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
